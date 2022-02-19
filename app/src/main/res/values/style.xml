@@ -1,0 +1,15 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <style name="NEW_USER_STYLE">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textDirection">locale</item>
+        <item name="android:background">@drawable/new_user_background</item>
+        <item name="android:paddingTop">@dimen/dimen_1_dp</item>
+        <item name="android:paddingBottom">@dimen/dimen_1_dp</item>
+        <item name="textAllCaps">true</item>
+        <item name="android:textColor">@color/blackShade</item>
+        <item name="android:textSize">@dimen/font_size_1</item>
+
+    </style>
+</resources>

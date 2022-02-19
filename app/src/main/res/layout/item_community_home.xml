@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:paddingStart="@dimen/standard_margin"
+        android:paddingTop="@dimen/dimen_12_dp"
+        android:paddingEnd="@dimen/standard_margin"
+        android:paddingBottom="@dimen/dimen_12_dp">
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/userImage"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:riv_corner_radius="12dp"
+            app:riv_oval="true"
+            tools:src="@drawable/user_image_place_holder" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/userLike"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/standard_margin"
+            android:layout_marginEnd="@dimen/dimen_25_dp"
+            android:src="@drawable/like_drawable"
+            app:layout_constraintBottom_toBottomOf="@+id/userImage"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/userName"
+            android:layout_width="@dimen/dimen_0_dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/standard_margin"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textSize="@dimen/font_size_2"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/userNew"
+            app:layout_constraintStart_toEndOf="@+id/userImage"
+            app:layout_constraintTop_toTopOf="@+id/userImage"
+            tools:text="User name" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/userTopic"
+            android:layout_width="@dimen/dimen_0_dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/standard_margin"
+            android:layout_marginTop="@dimen/dimen_5_dp"
+            android:ellipsize="end"
+            android:gravity="start"
+            android:maxLines="2"
+            android:textSize="@dimen/font_size_2"
+            app:layout_constraintStart_toEndOf="@+id/userImage"
+            app:layout_constraintTop_toBottomOf="@+id/userName"
+            tools:text="I can help to learn English &amp; Spanish jh jh zc jhzx czjxhc " />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/userNative"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/standard_margin"
+            android:layout_marginEnd="@dimen/standard_margin"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textSize="@dimen/font_size_1"
+            app:layout_constraintBottom_toBottomOf="@+id/userImage"
+            app:layout_constraintStart_toEndOf="@+id/userImage"
+            tools:text="Native EN" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/userLearn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/standard_margin"
+            android:layout_marginEnd="@dimen/standard_margin"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textSize="@dimen/font_size_1"
+            app:layout_constraintBottom_toBottomOf="@+id/userImage"
+            app:layout_constraintEnd_toStartOf="@+id/userLike"
+            app:layout_constraintStart_toEndOf="@+id/userNative"
+            tools:text="Learn RU" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/userNew"
+            style="@style/NEW_USER_STYLE"
+            android:layout_marginStart="@dimen/standard_margin"
+            android:layout_marginEnd="27dp"
+            android:clickable="false"
+            android:text="@string/new_user"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/userImage" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

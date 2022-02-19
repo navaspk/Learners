@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <color name="colorPrimary">#703DAF</color>
+    <color name="colorPrimaryDark">#703DAF</color>
+    <color name="colorAccent">#D81B60</color>
+
+    <color name="toolBarTitle">#FFFFFF</color>
+    <color name="blackShade">#333333</color>
+
+    <color name="grey">#BBBBBB</color>
+    <color name="splash_background">#703DAF</color>
+
+    <color name="tool_bar_color">#FFFFFF</color>
+    <color name="screen_background_color">#FFFFFF</color>
+    <color name="new_user_bg">#B39ECD</color>
+</resources>

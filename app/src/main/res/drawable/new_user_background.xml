@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ripple xmlns:android="http://schemas.android.com/apk/res/android"
+    android:color="@color/new_user_bg">
+
+    <item android:id="@android:id/mask">
+        <shape android:shape="rectangle">
+            <solid android:color="@color/new_user_bg" />
+            <corners android:radius="@dimen/dimen_12_dp" />
+            <stroke
+                android:width="@dimen/dimen_1_dp"
+                android:color="@color/new_user_bg" />
+            <padding
+                android:bottom="@dimen/dimen_4_dp"
+                android:left="@dimen/standard_margin"
+                android:right="@dimen/standard_margin"
+                android:top="@dimen/dimen_4_dp" />
+        </shape>
+    </item>
+
+    <item android:id="@android:id/background">
+        <shape android:shape="rectangle">
+            <solid android:color="@color/new_user_bg" />
+            <corners android:radius="@dimen/dimen_12_dp" />
+            <stroke
+                android:width="@dimen/dimen_1_dp"
+                android:color="@color/tool_bar_color" />
+            <padding
+                android:bottom="@dimen/dimen_4_dp"
+                android:left="@dimen/standard_margin"
+                android:right="@dimen/standard_margin"
+                android:top="@dimen/dimen_4_dp" />
+        </shape>
+    </item>
+
+</ripple>
