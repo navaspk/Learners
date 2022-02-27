@@ -1,6 +1,6 @@
-package com.sample.clean.entity
+package com.sample.clean.data.repository
 
-import com.sample.clean.servermodel.CommunityLearnersResponse
+import com.sample.clean.data.model.CommunityLearnersResponse
 import io.reactivex.Single
 
 interface CommunityRepository {

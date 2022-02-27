@@ -112,7 +112,7 @@ class NetworkUtil constructor(
                     }
 
                     HTTP_NOT_FOUND -> {
-                        throw HTTPNotFoundException("No data found")
+                        throw HTTPNotFoundException("No com.sample.clean.data found")
                     }
 
                 }

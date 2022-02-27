@@ -1,4 +1,4 @@
-package com.sample.clean.servermodel
+package com.sample.clean.data.model
 
 import com.sample.core.domain.entity.BaseResponse
 

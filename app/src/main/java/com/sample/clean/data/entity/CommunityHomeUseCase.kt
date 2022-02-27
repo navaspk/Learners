@@ -1,6 +1,7 @@
-package com.sample.clean.entity
+package com.sample.clean.data.entity
 
-import com.sample.clean.servermodel.CommunityLearnersResponse
+import com.sample.clean.data.repository.CommunityRepository
+import com.sample.clean.data.model.CommunityLearnersResponse
 import com.sample.core.domain.usecase.MainUseCase
 import com.sample.core.domain.executor.PostExecutionThread
 import io.reactivex.Single
@@ -11,7 +12,7 @@ class CommunityHomeUseCase @Inject constructor(
     postExecutionThread: PostExecutionThread
 ) : MainUseCase<CommunityLearnersResponse, CommunityHomeUseCase.Params>(postExecutionThread) {
 
-    override fun exploreUseCase(params: Params?): Single<CommunityLearnersResponse> {
+    override fun createUseCase(params: Params?): Single<CommunityLearnersResponse> {
         return communityRepository.getLearners()
     }
 

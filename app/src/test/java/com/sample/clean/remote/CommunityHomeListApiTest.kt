@@ -1,8 +1,8 @@
 package com.sample.clean.remote
 
 
-import com.sample.clean.entity.CommunityHomeService
-import com.sample.clean.servermodel.CommunityLearnersResponse
+import com.sample.clean.data.api.CommunityHomeServiceApi
+import com.sample.clean.data.model.CommunityLearnersResponse
 import com.sample.core.domain.entity.GsonProvider
 import io.reactivex.Single
 import kotlinx.coroutines.ExperimentalCoroutinesApi
@@ -24,17 +24,17 @@ class CommunityHomeListApiTest {
     val coroutineTestRule = CoroutineTestRule()
 
     private var mockWebServer = MockWebServer()
-    private lateinit var communityListApi: CommunityHomeService
+    private lateinit var communityListApiApi: CommunityHomeServiceApi
 
     @Before
     fun setUp() {
         mockWebServer.start()
-        communityListApi = Retrofit.Builder()
+        communityListApiApi = Retrofit.Builder()
             .baseUrl(mockWebServer.url("/"))
             .addConverterFactory(
                 GsonConverterFactory.create(GsonProvider().instance)
             )
-            .create(CommunityHomeService::class.java)
+            .create(CommunityHomeServiceApi::class.java)
     }
 
     @After
@@ -50,7 +50,7 @@ class CommunityHomeListApiTest {
 
         mockWebServer.enqueue(response)
         runBlocking(coroutineTestRule.testDispatcher) {
-            val articleListResponse: Single<CommunityLearnersResponse> = communityListApi.getCommunityUsers()
+            val articleListResponse: Single<CommunityLearnersResponse> = communityListApiApi.getCommunityUsers()
             Truth.assertThat(articleListResponse.isSuccessful).isTrue()
         }
     }
@@ -63,7 +63,7 @@ class CommunityHomeListApiTest {
 
         mockWebServer.enqueue(response)
         runBlocking(coroutineTestRule.testDispatcher) {
-            val articleListResponse: Single<CommunityLearnersResponse> = communityListApi.getCommunityUsers()
+            val articleListResponse: Single<CommunityLearnersResponse> = communityListApiApi.getCommunityUsers()
             Truth.assertThat(articleListResponse.body()?.numResults).isEqualTo(5)
         }
     }

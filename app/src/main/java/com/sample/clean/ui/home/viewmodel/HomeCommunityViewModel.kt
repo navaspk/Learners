@@ -4,9 +4,9 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
 import com.sample.clean.base.BaseNavigator
 import com.sample.clean.base.BaseViewModel
-import com.sample.clean.entity.CommunityHomeUseCase
-import com.sample.clean.servermodel.CommunityLearnersResponse
-import com.sample.clean.servermodel.ResponseItem
+import com.sample.clean.data.entity.CommunityHomeUseCase
+import com.sample.clean.data.model.CommunityLearnersResponse
+import com.sample.clean.data.model.ResponseItem
 import com.sample.core.domain.entity.BaseError
 import com.sample.core.domain.controller.CallbackListener
 import com.sample.core.util.PreferenceManager

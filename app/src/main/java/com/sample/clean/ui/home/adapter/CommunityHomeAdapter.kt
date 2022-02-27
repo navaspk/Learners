@@ -6,7 +6,7 @@ import com.sample.clean.base.BaseRecyclerAdapter
 import com.sample.clean.base.BaseViewHolder
 import com.sample.clean.base.ItemClickListener
 import com.sample.clean.databinding.ItemCommunityHomeBinding
-import com.sample.clean.servermodel.ResponseItem
+import com.sample.clean.data.model.ResponseItem
 import com.sample.clean.ui.event.ClickEvent
 
 /**

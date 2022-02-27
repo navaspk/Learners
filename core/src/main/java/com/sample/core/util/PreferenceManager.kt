@@ -5,6 +5,7 @@ import androidx.datastore.core.DataStore
 import com.sample.core.di.qualifier.ApplicationContext
 import com.sample.core.di.scopes.PerApplication
 import com.sample.core.extensions.safeGet
+import java.util.*
 import java.util.prefs.Preferences
 import javax.inject.Inject
 
@@ -36,6 +37,10 @@ class PreferenceManager @Inject constructor(
     // region STRING RULES
 
     fun getStringPolicy(key: String): String {
+        val scanner = Scanner(System.`in`)
+        scanner.nextInt()
+
+
         return sharedPreferences.getString(key, "").safeGet()
     }
 

@@ -23,7 +23,7 @@ abstract class MainUseCase<T : BaseResponse, Params>(private val postExecutionTh
             "Something went wrong , please try again after some time"
     }
 
-    abstract fun exploreUseCase(params: Params?): Single<T>
+    abstract fun createUseCase(params: Params?): Single<T>
 
     fun execute(
         callbackListener: CallbackListener<T>?,
@@ -34,7 +34,7 @@ abstract class MainUseCase<T : BaseResponse, Params>(private val postExecutionTh
             return null
         }
 
-        val single = exploreUseCase(params)
+        val single = createUseCase(params)
             .subscribeOn(Schedulers.io())
             .observeOn(postExecutionThread.scheduler())
 

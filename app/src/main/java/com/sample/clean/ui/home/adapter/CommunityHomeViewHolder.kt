@@ -6,7 +6,7 @@ import com.bumptech.glide.load.engine.DiskCacheStrategy
 import com.sample.clean.R
 import com.sample.clean.base.BaseViewHolder
 import com.sample.clean.databinding.ItemCommunityHomeBinding
-import com.sample.clean.servermodel.ResponseItem
+import com.sample.clean.data.model.ResponseItem
 import android.text.Html
 import com.sample.clean.ui.event.ClickEvent
 

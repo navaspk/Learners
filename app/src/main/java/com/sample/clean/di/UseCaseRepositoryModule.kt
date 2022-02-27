@@ -3,9 +3,9 @@ package com.sample.clean.di
 import android.content.Context
 import com.google.gson.Gson
 import com.google.gson.GsonBuilder
-import com.sample.clean.entity.CommunityHomeRepository
-import com.sample.clean.entity.CommunityRepository
-import com.sample.clean.entity.CommunityHomeUseCase
+import com.sample.clean.data.repository.CommunityHomeRepository
+import com.sample.clean.data.repository.CommunityRepository
+import com.sample.clean.data.entity.CommunityHomeUseCase
 import com.sample.core.domain.executor.PostExecutionThread
 import com.sample.core.domain.entity.GsonProvider
 import com.sample.core.util.PreferenceManager

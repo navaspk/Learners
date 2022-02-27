@@ -1,4 +1,4 @@
-package com.sample.clean.ui
+package com.sample.clean.ui.main
 
 import com.sample.clean.databinding.ActivityMainBinding
 import com.sample.clean.base.BaseActivity
